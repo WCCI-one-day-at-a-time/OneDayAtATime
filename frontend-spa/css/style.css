@@ -1,0 +1,15 @@
+.grid-container{
+    background-color: aqua;
+}
+
+.col-left{
+    background-color: blue;
+}
+
+.col-mid{
+    background-color: coral;
+}
+
+.col-right{
+    background-color: darkcyan;
+}
