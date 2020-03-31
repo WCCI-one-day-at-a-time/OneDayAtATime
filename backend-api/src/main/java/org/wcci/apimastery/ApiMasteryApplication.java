@@ -1,13 +1,13 @@
-package com.onedayatatime.demo;
+package org.wcci.apimastery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class ApiMasteryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(ApiMasteryApplication.class, args);
 	}
 
 }
