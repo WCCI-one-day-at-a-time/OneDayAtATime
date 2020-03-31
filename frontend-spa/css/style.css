@@ -1,15 +1,33 @@
-.grid-container{
-    background-color: aqua;
+body{
+    background-color: #7B86B2;
+    color: white;
+    font-family: sans-serif;
+}
+
+.lander__header{
+    font-size: 2.5em;
 }
 
 .col-left{
-    background-color: blue;
+    background-color: #435590;
+}
+.card{
+    background-color: #5E70B7;
+}
+button{
+    background-color: #5E70B7;
+}
+.hotline-title{
+    color: #435590;
+}
+.hotline-number{
+color:#223275 ;
+}
+ul{
+    list-style: none;
+}
+.hotline{
+    color: #435590;
 }
 
-.col-mid{
-    background-color: coral;
-}
 
-.col-right{
-    background-color: darkcyan;
-}
