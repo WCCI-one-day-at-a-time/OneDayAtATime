@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import java.util.Collection;
 
 @Entity
 public class Emotion {
@@ -11,14 +12,13 @@ public class Emotion {
     @GeneratedValue
     private Long id;
     private String name;
-    private Rating rating;
-    @ManyToMany(mappedBy = "Emotion")
+    @ManyToMany(mappedBy = "emotion")
     private Collection<Rating> rating;
 
     protected Emotion (){
 
     }
-    public Emotion(String name, Rating rating){
+    public Emotion(String name, Collection<Rating> rating){
 
         this.name = name;
         this.rating = rating;
