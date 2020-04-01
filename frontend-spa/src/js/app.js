@@ -28,8 +28,12 @@ const highAnxiousResponse = () => {
 
 const submit = () =>{
 console.log("submitPress")
-console.log(anxiousInput.value)
-inputs.forEach(input => {if(input.value >0 && input.value <= 33){
+
+inputs.forEach(input => {
+    
+    console.log(input.value + input.name)
+    
+    if(input.value >0 && input.value <= 33){
     console.log(input.name+"lowResponse")
 }
 if(input.value >=34 && input.value <= 66){
