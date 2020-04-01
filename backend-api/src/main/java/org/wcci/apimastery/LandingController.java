@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
-        @RequestMapping("/landing")
-        public String displayLanding(Model model) {
-           
-            return ;
-
-        }
+//        @RequestMapping("/landing")
+//        public String displayLanding(Model model) {
+//
+//            return ;
+//
+//        }
 
 
 }

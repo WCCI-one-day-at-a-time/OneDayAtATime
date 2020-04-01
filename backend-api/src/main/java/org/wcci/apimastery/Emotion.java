@@ -12,18 +12,29 @@ public class Emotion {
     @GeneratedValue
     private Long id;
     private String name;
-    @ManyToMany(mappedBy = "emotion")
-    private Collection<Rating> rating;
+    private String lowRating;
+    private String medRating;
+    private String highRating;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     protected Emotion (){
 
     }
-    public Emotion(String name, Collection<Rating> rating){
 
+
+
+    public Emotion(String name){
         this.name = name;
-        this.rating = rating;
-
-
     }
+
+
+
 
 }
