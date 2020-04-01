@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/style.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Day At A Time</title>
@@ -18,57 +19,59 @@
                 <div class="speedometer">
                     <p class="speedometer-title">Anxious</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="anxious_input" type="range"value="0"min="0" max="100">
                     </div>
                 </div>
                 <div class="speedometer">
                     <p class="speedometer-title">Depressed</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="depressed_input"type="range"value="0"min="0" max="100">
                     </div>
                 </div>
                 <div class="speedometer">
                     <p class="speedometer-title">Overwhelmed</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="overwhelmed_input"type="range"value="0"min="0" max="100">
                     </div>
                 </div>
                 <div class="speedometer">
                     <p class="speedometer-title">Lonely</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="lonely_input"type="range"value="0"min="0" max="100">
                     </div>
                 </div>
                 <div class="speedometer">
                     <p class="speedometer-title">Sad</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="sad_input"type="range" value="0"min="0" max="100">
                     </div>
                 </div>
                 <div class="speedometer">
                     <p class="speedometer-title">Angry</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="angry_input"type="range"value="0"min="0" max="100">
                     </div>
                 </div>
                 <div class="speedometer">
                     <p class="speedometer-title">Rejected</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="rejected_input"type="range"value="0"min="0" max="100">
                     </div>
                 </div>
                 <div class="speedometer">
                     <p class="speedometer-title">Exhausted</p>
                     <div class="slider">
-                        <input type="range">
+                        <input class="exhausted_input"type="range"value="0"min="0" max="100">
                     </div>
                 </div>
             </div>
             <div class="button__div">
-            <button class="main-button">Calendar</button>
-            <button class="urgent">Need Help Now</button>
-            <button class="main-button">Sumbit</button>
+            <button class="main-button calendar_button">Calendar</button>
+            <button class="urgent help_button">Need Help Now</button>
+            <button class="main-button submit-button">Submit</button>
                 </div>
+
+
                 
         </div>
         </section>
@@ -87,6 +90,7 @@
         </section>
     </div>
 
+    <script src="../js/app.js"></script>
     
 </body>
 </html>
