@@ -25,49 +25,29 @@ const highAnxiousResponse = () => {
 
 
 
-
 const submit = () =>{
-console.log("submitPress")
+        console.log("submitPress")
 
-inputs.forEach(input => {
+    inputs.forEach(input => {
+        const lowResponse = input.value >0 && input.value <= 33 
+        const medResponse = input.value >=34 && input.value <= 66
+        const highResponse = input.value >=67 && input.value <= 100
     
-    console.log(input.value + input.name)
+        console.log(input.value + input.name)
     
-    if(input.value >0 && input.value <= 33){
-    console.log(input.name+"lowResponse")
-}
-if(input.value >=34 && input.value <= 66){
-    console.log(input.name+"midResponse")
-}
-if(input.value >=67 && input.value <= 100){
-    console.log(input.name+"highResponse")
-}
-
-})
-// if(anxiousInput.value >0 && anxiousInput.value <= 33 ){
-//     lowAnxiousResponse()
-// }
-// if(anxiousInput.value >=34 && anxiousInput.value <= 66 ){
-//     midAnxiousResponse()
-// }
-// if(anxiousInput.value >= 67 && anxiousInput.value <= 100){
-//     highAnxiousResponse()
-// }
-
-// console.log(angryInput.value)
-// if(angryInput.value >0 && angryInput.value <= 33 ){
-//     lowAngryResponse()
-// }
-// if(anxiousInput.value >=34 && anxiousInput.value <= 66 ){
-//     midAngryResponse()
-// }
-// if(anxiousInput.value >= 67 && anxiousInput.value <= 100){
-//     highAngryResponse()
-// }
+        if (lowResponse){
+        console.log(input.name+"lowResponse")
+        }
+        if(medResponse){
+        console.log(input.name+"midResponse")
+        }
+        if(highResponse){
+        console.log(input.name+"highResponse")
+        }
+    })
 }
 
 
 
-calendarButton.addEventListener("click",submit)
 submitButton.addEventListener("click",submit)
-helpButton.addEventListener("click",submit)
+
