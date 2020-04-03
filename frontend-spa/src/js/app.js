@@ -9,8 +9,10 @@ const exhaustedInput = document.querySelector(".exhausted_input")
 const submitButton = document.querySelector(".submit-button")
 const calendarButton = document.querySelector(".calendar_button")
 const helpButton = document.querySelector(".help_button")
-
+const colMid = document.querySelector(".col-mid")
 const inputs = document.querySelectorAll(".slider_input")
+
+
 
 const lowAnxiousResponse = () => {
     console.log("lowAnxiousResponse")
@@ -22,32 +24,171 @@ const highAnxiousResponse = () => {
     console.log("highAnxiousResponse")
 }
 
+const lowDepressedResponse = () => {
+    console.log("lowDepressedResponse")
+}
+const midDepressedResponse = () => {
+    console.log("midDepressedResponse")
+}
+const highDepressedResponse = () => {
+    console.log("highDepressedResponse")
+}
 
+const lowAngryResponse = () => {
+    console.log("lowAngryResponse")
+}
+const midAngryResponse = () => {
+    console.log("midAngryResponse")
+}
+const highAngryResponse = () => {
+    console.log("highAngryResponse")
+}
 
+const lowSadResponse = () => {
+    console.log("lowSadResponse")
+}
+const midSadResponse = () => {
+    console.log("midSadResponse")
+}
+const highSadResponse = () => {
+    console.log("highSadResponse")
+}
+
+const lowLonelyResponse = () => {
+    console.log("lowLonelyResponse")
+}
+const midLonelyResponse = () => {
+    console.log("midLonelyResponse")
+}
+const highLonelyResponse = () => {
+    console.log("highLonelyResponse")
+}
+
+const lowExhaustedResponse = () => {
+    console.log("lowExhaustedResponse")
+}
+const midExhaustedResponse = () => {
+    console.log("midExhaustedResponse")
+}
+const highExhaustedResponse = () => {
+    console.log("highExhaustedResponse")
+}
+
+const lowOverwhelmedResponse = () => {
+    console.log("lowOverwhelmedResponse")
+}
+const midOverwhelmedResponse = () => {
+    console.log("midOverwhelmedResponse")
+}
+const highOverwhelmedResponse = () => {
+    console.log("highOverwhelmedResponse")
+}
+
+const lowRejectedResponse = () => {
+    console.log("lowRejectedResponse")
+}
+const midRejectedResponse = () => {
+    console.log("midRejectedResponse")
+}
+const highRejetedResponse = () => {
+    console.log("highRejectedResponse")
+}
 
 const submit = () =>{
-        console.log("submitPress")
 
-    inputs.forEach(input => {
-        const lowResponse = input.value >0 && input.value <= 33 
-        const medResponse = input.value >=34 && input.value <= 66
-        const highResponse = input.value >=67 && input.value <= 100
+        console.log("submitPress")
+        
+            colMid.innerHTML = `<div class="card__container"></div>`
+            const cardAnchor = document.querySelector(".card__container")
+            
+        inputs.forEach(input => {
+                const lowResponse = input.value >0 && input.value <= 33
+                const medResponse = input.value >=34 && input.value <= 66
+                const highResponse = input.value >=67 && input.value <= 100
+                const card = document.createElement("div")
+                card.classList.add("card")
+                
     
-        console.log(input.value + input.name)
+                console.log(input.value + input.name)
     
-        if (lowResponse){
-        console.log(input.name+"lowResponse")
-        }
+             if (lowResponse){
+                let lowResponse = ""
+                switch(input.name){
+                    case "anxious": lowResponse = "whatever low response"
+                    break
+                    case "depressed": lowResponse = "whatever depressed"
+                    break
+                    case "lonely": lowResponse = "im alone!"
+                    break
+                    case "angry": lowResponse = "take a breather"
+                    break
+                    case "overwhelmed": lowResponse = "take a walk"
+                    break
+                    case "sad": lowResponse = "go to a pet store"
+                    break
+                    case "rejected": lowResponse = "call a family member"
+                    break
+                    case "exhausted": lowResponse = "go for a drive"
+                    break
+                }
+                card.innerText = lowResponse
+                cardAnchor.appendChild(card)
+            }
         if(medResponse){
-        console.log(input.name+"midResponse")
+            let medResponse = ""
+            switch(input.name){
+                case "anxious": medResponse = "medAnxiety response"
+                break
+                case "depressed": medResponse = "med drepessed"
+                break
+                case "lonely": medResponse = "med lonely"
+                break
+                case "angry": medResponse = "med angry"
+                break
+                case "overwhelmed": medResponse = "med overwhel"
+                break
+                case "sad": medResponse = "med sad"
+                break
+                case "rejected": medResponse = "med rejec"
+                break
+                case "exhausted": medResponse = "med exhau"
+                break
+            }
+            card.innerText = medResponse
+            cardAnchor.appendChild(card)
         }
         if(highResponse){
-        console.log(input.name+"highResponse")
+            let highResponse = ""
+            switch(input.name){
+                case "anxious": highResponse = "HIGH response"
+                break
+                case "depressed": highResponse = "HIGH drepessed"
+                break
+                case "lonely": highResponse = "HIGH lonely"
+                break
+                case "angry": highResponse = "HIGH angry"
+                break
+                case "overwhelmed": highResponse = "HIGH overwhel"
+                break
+                case "sad": highResponse = "HIGH sad"
+                break
+                case "rejected": highResponse = "HIGH rejec"
+                break
+                case "exhausted": highResponse = "HIGH exhau"
+                break
+            }
+            card.innerText = highResponse
+            cardAnchor.appendChild(card)
         }
+        renderResponseView()
+        
     })
+
 }
 
 
+const renderResponseView = () =>{
+}
+
 
 submitButton.addEventListener("click",submit)
-
