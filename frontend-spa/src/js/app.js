@@ -20,8 +20,9 @@ let angryResponse = ""
 let rejectedResponse = ""
 let exhaustedResponse = ""
 const today = new Date();
-const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-
+const day = today.getDate();
+const month = today.getMonth()+1;
+const year = today.getFullYear();
 const submit = () =>{
 
         console.log("submitPress")
@@ -145,7 +146,9 @@ const submit = () =>{
             "sad":sadResponse,
             "rejected":rejectedResponse,
             "exhausted":exhaustedResponse,
-            "date":date
+            "month":month,
+            "day":day,
+            "year":year
         }
         console.log(newSubmitJson)
         fetch("http://localhost:8080/submit/",{
