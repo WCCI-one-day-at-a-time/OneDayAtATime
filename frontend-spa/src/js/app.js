@@ -19,7 +19,10 @@ let overwhelmedResponse = ""
 let angryResponse = ""
 let rejectedResponse = ""
 let exhaustedResponse = ""
-
+const today = new Date();
+const day = today.getDate();
+const month = today.getMonth()+1;
+const year = today.getFullYear();
 const submit = () =>{
 
         console.log("submitPress")
@@ -28,6 +31,7 @@ const submit = () =>{
             const cardAnchor = document.querySelector(".card__container")
             
         inputs.forEach(input => {
+
                 const lowResponse = input.value >0 && input.value <= 33
                 const medResponse = input.value >=34 && input.value <= 66
                 const highResponse = input.value >=67 && input.value <= 100
@@ -141,8 +145,12 @@ const submit = () =>{
             "overwhelmed":overwhelmedResponse,
             "sad":sadResponse,
             "rejected":rejectedResponse,
-            "exhausted":exhaustedResponse
+            "exhausted":exhaustedResponse,
+            "month":month,
+            "day":day,
+            "year":year
         }
+        console.log(newSubmitJson)
         fetch("http://localhost:8080/submit/",{
             method: "POST",
             headers: {
@@ -150,6 +158,7 @@ const submit = () =>{
             },
             body: JSON.stringify(newSubmitJson)
         })
+
 }
 
 
