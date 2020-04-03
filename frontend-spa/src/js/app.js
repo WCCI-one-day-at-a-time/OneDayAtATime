@@ -143,7 +143,13 @@ const submit = () =>{
             "rejected":rejectedResponse,
             "exhausted":exhaustedResponse
         }
-    console.log (newSubmitJson)
+        fetch("http://localhost:8080/submit/",{
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSubmitJson)
+        })
 }
 
 
