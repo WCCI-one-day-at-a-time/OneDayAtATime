@@ -128,6 +128,26 @@ const submit = () =>{
             console.log(lowResponse)
         }
         if(medResponse){
+            let medResponse = ""
+            switch(input.name){
+                case "anxious": medResponse = "medAnxiety response"
+                break
+                case "depressed": medResponse = "med drepessed"
+                break
+                case "lonely": medResponse = "med lonely"
+                break
+                case "angry": medResponse = "med angry"
+                break
+                case "overwhelmed": medResponse = "med overwhel"
+                break
+                case "sad": medResponse = "med sad"
+                break
+                case "rejected": medResponse = "med rejec"
+                break
+                case "exhausted": medResponse = "med exhau"
+                break
+            }
+            console.log(medResponse)
         }
         if(highResponse){
         }
