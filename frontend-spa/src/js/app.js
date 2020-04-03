@@ -97,35 +97,43 @@ const highRejetedResponse = () => {
 const submit = () =>{
 
         console.log("submitPress")
-
-    inputs.forEach(input => {
-        const lowResponse = input.value >0 && input.value <= 33
-        const medResponse = input.value >=34 && input.value <= 66
-        const highResponse = input.value >=67 && input.value <= 100
+        
+            colMid.innerHTML = `<div class="card__container"></div>`
+            const cardAnchor = document.querySelector(".card__container")
+            
+        inputs.forEach(input => {
+                const lowResponse = input.value >0 && input.value <= 33
+                const medResponse = input.value >=34 && input.value <= 66
+                const highResponse = input.value >=67 && input.value <= 100
+                const card = document.createElement("div")
+                card.classList.add("card")
+                
     
-        console.log(input.value + input.name)
+                console.log(input.value + input.name)
     
-        if (lowResponse){
-            let lowResponse = ""
-            switch(input.name){
-                case "anxious": lowResponse = "whatever low response"
-                break
-                case "depressed": lowResponse = "whatever depressed"
-                break
-                case "lonely": lowResponse = "im alone!"
-                break
-                case "angry": lowResponse = "take a breather"
-                break
-                case "overwhelmed": lowResponse = "take a walk"
-                break
-                case "sad": lowResponse = "go to a pet store"
-                break
-                case "rejected": lowResponse = "call a family member"
-                break
-                case "exhausted": lowResponse = "go for a drive"
-                break
+             if (lowResponse){
+                let lowResponse = ""
+                switch(input.name){
+                    case "anxious": lowResponse = "whatever low response"
+                    break
+                    case "depressed": lowResponse = "whatever depressed"
+                    break
+                    case "lonely": lowResponse = "im alone!"
+                    break
+                    case "angry": lowResponse = "take a breather"
+                    break
+                    case "overwhelmed": lowResponse = "take a walk"
+                    break
+                    case "sad": lowResponse = "go to a pet store"
+                    break
+                    case "rejected": lowResponse = "call a family member"
+                    break
+                    case "exhausted": lowResponse = "go for a drive"
+                    break
+                }
+                card.innerText = lowResponse
+                cardAnchor.appendChild(card)
             }
-        }
         if(medResponse){
             let medResponse = ""
             switch(input.name){
@@ -146,7 +154,8 @@ const submit = () =>{
                 case "exhausted": medResponse = "med exhau"
                 break
             }
-            console.log(medResponse)
+            card.innerText = medResponse
+            cardAnchor.appendChild(card)
         }
         if(highResponse){
             let highResponse = ""
@@ -168,17 +177,17 @@ const submit = () =>{
                 case "exhausted": highResponse = "HIGH exhau"
                 break
             }
-            console.log(highResponse)
+            card.innerText = highResponse
+            cardAnchor.appendChild(card)
         }
+        renderResponseView()
+        
     })
-}
-const renderResponseView = () =>{
-    colMid.innerHTML = `<div class="card__container">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
 
-</div>`
+}
+
+
+const renderResponseView = () =>{
 }
 
 
