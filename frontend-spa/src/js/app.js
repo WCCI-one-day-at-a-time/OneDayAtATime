@@ -9,7 +9,7 @@ const exhaustedInput = document.querySelector(".exhausted_input")
 const submitButton = document.querySelector(".submit-button")
 const calendarButton = document.querySelector(".calendar_button")
 const helpButton = document.querySelector(".help_button")
-
+const colMid = document.querySelector(".col-mid")
 const inputs = document.querySelectorAll(".slider_input")
 
 
@@ -125,7 +125,6 @@ const submit = () =>{
                 case "exhausted": lowResponse = "go for a drive"
                 break
             }
-            console.log(lowResponse)
         }
         if(medResponse){
             let medResponse = ""
@@ -173,5 +172,14 @@ const submit = () =>{
         }
     })
 }
+const renderResponseView = () =>{
+    colMid.innerHTML = `<div class="card__container">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+
+</div>`
+}
+
 
 submitButton.addEventListener("click",submit)
