@@ -5,5 +5,6 @@ import org.wcci.apimastery.Model.UserSubmission;
 
 public interface UserSubmissionRepository extends CrudRepository<UserSubmission, Long>{
 
+
 }
 
