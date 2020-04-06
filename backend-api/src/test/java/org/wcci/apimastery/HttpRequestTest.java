@@ -25,7 +25,7 @@ public class HttpRequestTest {
     @Test
     public void landingEndPointReturnsOK(){
         ResponseEntity<String> response = testRestTemplate.getForEntity(
-                "http://localhost:" + port + "/landing", String.class);
+                "http://localhost:" + port + "/submissions", String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 }
