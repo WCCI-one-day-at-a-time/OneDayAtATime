@@ -8,11 +8,9 @@ import java.util.Optional;
 
 public interface SubmissionStorage {
 
-    void store(UserSubmission userSubmission);
-
-    Optional<UserSubmission> findSubById(Long id);
-
     Collection<UserSubmission> findAllSubs();
+    Optional<UserSubmission> findSubById(Long id);
+    void store(UserSubmission submissionToAdd);
 
 
 }
