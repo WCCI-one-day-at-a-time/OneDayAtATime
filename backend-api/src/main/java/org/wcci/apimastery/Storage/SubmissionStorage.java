@@ -1,8 +1,6 @@
 package org.wcci.apimastery.Storage;
 
 import org.wcci.apimastery.Model.UserSubmission;
-import org.wcci.apimastery.Repositories.UserSubmissionRepository;
-
 import java.util.Collection;
 import java.util.Optional;
 

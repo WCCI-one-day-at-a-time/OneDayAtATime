@@ -26,7 +26,7 @@ public class LandingControllerTest {
     void setUp(){
         userSubmissionRepository =  mock(UserSubmissionRepository.class);
         submissionStorage = new UserSubJPAImpl(userSubmissionRepository);
-        underTest = new LandingController(submissionStorage);
+        underTest = new LandingController(userSubmissionRepository);
         testUserSubmission = new UserSubmission();
         when(userSubmissionRepository.findAll()).thenReturn(Collections.singletonList(testUserSubmission));
 
