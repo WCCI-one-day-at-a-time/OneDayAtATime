@@ -2,30 +2,25 @@ package org.wcci.apimastery.Controllers;
 
 import org.springframework.web.bind.annotation.*;
 import org.wcci.apimastery.Model.UserSubmission;
-import org.wcci.apimastery.Storage.SubmissionStorage;
-
+import org.wcci.apimastery.Repositories.UserSubmissionRepository;
 import java.util.Collection;
 
 @RestController
 public class LandingController {
-    private SubmissionStorage submissionStorage;
+    private UserSubmissionRepository userSubmissionRepo;
 
-    public LandingController(SubmissionStorage submissionStorage) {
-        this.submissionStorage = submissionStorage;
+    public LandingController(UserSubmissionRepository userSubmissionRepo) {
+        this.userSubmissionRepo = userSubmissionRepo;
     }
-
-    public LandingController() {
-    }
-
 
     @PostMapping("/submit")
-    public void addNewSubmission(@RequestBody UserSubmission submissionToAdd) {
-        submissionStorage.store(submissionToAdd);
+    public UserSubmission addNewSubmission(@RequestBody UserSubmission submissionToAdd) {
+        return userSubmissionRepo.save(submissionToAdd);
     }
 
-    @GetMapping("/submissions")
+    @GetMapping("/response")
     public Collection<UserSubmission> retrieveUserSubmission() {
-        return submissionStorage.findAllSubs();
+        return (Collection<UserSubmission>) userSubmissionRepo.findAll();
 
     }
 

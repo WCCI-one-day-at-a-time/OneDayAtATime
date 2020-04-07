@@ -15,8 +15,6 @@ public class UserSubJPAImpl implements SubmissionStorage {
         this.userSubRepo = userSubRepo;
     }
 
-
-
     @Override
     public Optional<UserSubmission> findSubById(Long id) {
         return userSubRepo.findById(id);
