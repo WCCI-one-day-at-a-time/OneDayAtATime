@@ -24,7 +24,9 @@ h1{
 
 .col-mid{
     grid-column:2/6;
+    position: relative;
 
+    
 }
 
 .col-right{
@@ -42,6 +44,8 @@ h1{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    position: absolute;
+    bottom: 25%;
 }
 .card__container{
     display: flex;
