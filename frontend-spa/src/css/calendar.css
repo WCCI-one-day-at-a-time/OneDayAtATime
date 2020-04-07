@@ -21,7 +21,7 @@
 .calendar_anchor{
     height: 100%;
     grid-row: 1;
-    
+
 
 }
 .calendar_month{
@@ -37,10 +37,20 @@
 
 }
 .calendar_day-high{
-background-color: #eb3447;
+background-color: #ec6996;
 }
 .calendar_header{
     text-align: center;
+
+}
+.day_anchor{
+    height: 100%;
+}
+.single_day{
+    height:50%;
+    width: 75%;
+    margin: 0 auto;
+    color: #435590;     
 
 }
 
