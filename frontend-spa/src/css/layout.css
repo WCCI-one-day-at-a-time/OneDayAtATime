@@ -24,7 +24,19 @@ h1{
 
 .col-mid{
     grid-column:2/6;
+    display: grid;
+    grid-template-rows: 1fr 7fr 3fr;
+      
+}
+.mid-row-one{
+    grid-row:1;
 
+}
+.mid-row-two{
+    grid-row:2;
+}
+.mid-row-three{
+    grid-row: 3;
 }
 
 .col-right{
@@ -42,6 +54,7 @@ h1{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    bottom: 25%;
 }
 .card__container{
     display: flex;

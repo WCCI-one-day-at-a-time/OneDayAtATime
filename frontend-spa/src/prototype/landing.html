@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/calendar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Day At A Time</title>
@@ -11,8 +12,9 @@
     <div class="grid-container">
         <aside class="col-left"></aside>
         <section class="col-mid">
-            <h1>One Day At A Time</h1>
-            <div class="speedometer-grid">
+            <div class="mid-row-one"><h1>One Day At A Time</h1>
+            </div>
+           <div class="mid-row-two"><div class="speedometer-grid">
             <h2 class="lander__header">How Are You Feeling?</h2>
             <div class="rating-elements">
                 <div class="speedometer">
@@ -64,15 +66,16 @@
                     </div>
                 </div>
             </div>
-            <div class="button__div">
-            <button class="main-button calendar_button">Calendar</button>
-            <button class="urgent help_button">Need Help Now</button>
-            <button class="main-button submit-button">Submit</button>
-                </div>
-
-
+    
                 
         </div>
+    </div>
+        <div class="mid-row-three"><div class="button__div">
+            <a class="main-button calendar_button">Calendar</a>
+            <a class="urgent help_button main-button">Need Help Now</a>
+            <a class="main-button submit-button">Submit</a>
+                </div>
+            </div>
         </section>
         <section class="col-right">
             <div class="info-list">
@@ -90,6 +93,7 @@
     </div>
 
     <script src="../js/app.js"></script>
+    <script src="../js/calendar.js"></script>
     
 </body>
 </html>
