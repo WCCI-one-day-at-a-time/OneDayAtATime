@@ -12,8 +12,13 @@
 }
 .calendar_day{
     background-color: white;
+
   
 }
+.calendar_day:hover{
+    transition: transform 100ms ease-out;
+    transform: scale(1.1);
+}       
 .col-mid{
    
 }
@@ -24,3 +29,4 @@
     font-size: 2.5em;
     text-align: center;
 }
+.
