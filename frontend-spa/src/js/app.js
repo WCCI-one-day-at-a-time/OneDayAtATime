@@ -11,6 +11,7 @@ const singleDays = document.querySelectorAll(".calendar_day")
 const helpButton = document.querySelector(".help_button")
 const colMid = document.querySelector(".col-mid")
 const inputs = document.querySelectorAll(".slider_input")
+const calendarGrid = document.querySelector(".calendar_grid")
 let anxiousResponse = ""
 let depressedResponse = ""
 let lonelyResponse = ""
