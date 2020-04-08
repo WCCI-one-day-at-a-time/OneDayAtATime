@@ -56,5 +56,20 @@ const calendarSubmit = () =>{
        <div class="calendar_day"></div>
    </div>`
 
+
 }
+singleDays.forEach((singleDay) => {
+    singleDay.addEventListener("click", (singleDay)=>{
+        midRowTwo.innerHTML = `<div class="day_anchor">
+        <div class="single_day calendar_day-high ">
+            <h3 class="">date</h3>
+            <ul class="">
+                <li class="">anxious</li>
+                <li class="">depressed</li>
+            </ul>
+        </div>
+    </div>`
+    })
+
+} )
 calendarButton.addEventListener("click", calendarSubmit)
