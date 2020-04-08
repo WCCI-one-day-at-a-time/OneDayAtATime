@@ -23,6 +23,7 @@ const today = new Date();
 const day = today.getDate();
 const month = today.getMonth()+1;
 const year = today.getFullYear();
+
 const submit = () =>{
 
         console.log("submitPress")
@@ -148,7 +149,8 @@ const submit = () =>{
             "exhausted":exhaustedResponse,
             "month":month,
             "day":day,
-            "year":year
+            "year":year,
+            "note":note
         }
         console.log(newSubmitJson)
         fetch("http://localhost:8080/submit",{
