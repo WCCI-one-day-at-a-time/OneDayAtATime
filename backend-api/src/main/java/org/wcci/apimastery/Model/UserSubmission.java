@@ -24,10 +24,12 @@ public class UserSubmission {
     private String overwhelmedResponse;
     private String rejectedResponse;
 
+    private String notes;
+
     public UserSubmission() {
     }
 
-    public UserSubmission(int month, int day, int year, String anxiousResponse, String depressedResponse, String sadResponse, String lonelyResponse, String exhaustedResponse, String angryResponse, String overwhelmedResponse, String rejectedResponse) {
+    public UserSubmission(int month, int day, int year, String anxiousResponse, String depressedResponse, String sadResponse, String lonelyResponse, String exhaustedResponse, String angryResponse, String overwhelmedResponse, String rejectedResponse,String notes) {
         this.month = month;
         this.day = day;
         this.year = year;
@@ -39,6 +41,11 @@ public class UserSubmission {
         this.angryResponse = angryResponse;
         this.overwhelmedResponse = overwhelmedResponse;
         this.rejectedResponse = rejectedResponse;
+        this.notes = notes;
+    }
+
+    public String getNotes() {
+        return notes;
     }
 
     public int getDay() {
