@@ -66,3 +66,7 @@ h1{
     height: 100px;
     margin: 20px;
 }
+.note{
+    display: flex;
+    flex-direction: column;
+}
