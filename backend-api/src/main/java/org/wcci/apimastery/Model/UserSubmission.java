@@ -10,37 +10,37 @@ public class UserSubmission {
     @Id
     @GeneratedValue
     private Long id;
+private int month;
 
-    private int month;
     private int day;
     private int year;
 
-    private String anxiousResponse;
-    private String depressedResponse;
-    private String sadResponse;
-    private String lonelyResponse;
-    private String exhaustedResponse;
-    private String angryResponse;
-    private String overwhelmedResponse;
-    private String rejectedResponse;
+    private String anxious;
+    private String depressed;
+    private String sad;
+    private String lonely;
+    private String exhausted;
+    private String angry;
+    private String overwhelmed;
+    private String rejected;
 
     private String notes;
 
     public UserSubmission() {
     }
 
-    public UserSubmission(int month, int day, int year, String anxiousResponse, String depressedResponse, String sadResponse, String lonelyResponse, String exhaustedResponse, String angryResponse, String overwhelmedResponse, String rejectedResponse,String notes) {
+    public UserSubmission(int month, int day, int year, String anxious, String depressed, String sad, String lonely, String exhausted, String angry, String overwhelmed, String rejected, String notes) {
         this.month = month;
         this.day = day;
         this.year = year;
-        this.anxiousResponse = anxiousResponse;
-        this.depressedResponse = depressedResponse;
-        this.sadResponse = sadResponse;
-        this.lonelyResponse = lonelyResponse;
-        this.exhaustedResponse = exhaustedResponse;
-        this.angryResponse = angryResponse;
-        this.overwhelmedResponse = overwhelmedResponse;
-        this.rejectedResponse = rejectedResponse;
+        this.anxious = anxious;
+        this.depressed = depressed;
+        this.sad = sad;
+        this.lonely = lonely;
+        this.exhausted = exhausted;
+        this.angry = angry;
+        this.overwhelmed = overwhelmed;
+        this.rejected = rejected;
         this.notes = notes;
     }
 
@@ -60,36 +60,36 @@ public class UserSubmission {
         return year;
     }
 
-    public String getAnxiousResponse() {
-        return anxiousResponse;
+    public String getAnxious() {
+        return anxious;
     }
 
-    public String getDepressedResponse() {
-        return depressedResponse;
+    public String getDepressed() {
+        return depressed;
     }
 
-    public String getSadResponse() {
-        return sadResponse;
+    public String getSad() {
+        return sad;
     }
 
-    public String getLonelyResponse() {
-        return lonelyResponse;
+    public String getLonely() {
+        return lonely;
     }
 
-    public String getExhaustedResponse() {
-        return exhaustedResponse;
+    public String getExhausted() {
+        return exhausted;
     }
 
-    public String getAngryResponse() {
-        return angryResponse;
+    public String getAngry() {
+        return angry;
     }
 
-    public String getOverwhelmedResponse() {
-        return overwhelmedResponse;
+    public String getOverwhelmed() {
+        return overwhelmed;
     }
 
-    public String getRejectedResponse() {
-        return rejectedResponse;
+    public String getRejected() {
+        return rejected;
     }
 
     public Long getId() {

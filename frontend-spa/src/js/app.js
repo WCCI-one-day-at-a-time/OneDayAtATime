@@ -151,7 +151,7 @@ const submit = () =>{
             "year":year
         }
         console.log(newSubmitJson)
-        fetch("http://localhost:8080/submit/",{
+        fetch("http://localhost:8080/submit",{
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
