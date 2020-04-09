@@ -5,15 +5,5 @@ const getSubmissions =() =>{
   
     
 }
-const renderCalendarView = (submissions) =>{
-    const calendarSquare = document.createElement("div")
-        submissions.forEach((submission) => {
-        console.log(submission.year)
-        calendarSquare.classList.add("calendar_day")
-        calendarSquare.innerHTML = submission.day + "/" + submission.month + "/" + submission.year;
-        calendarGrid.appendChild(calendarSquare)
 
-    })
-        
-    };
 
