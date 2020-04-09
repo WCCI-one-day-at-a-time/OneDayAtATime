@@ -3,7 +3,7 @@ const calendarButton = document.querySelector(".calendar_button")
 
 const calendarSubmit = () =>{
     
-
+    getSubmissions()
     console.log("calendarpressed")
     
         midRowTwo.innerHTML = `<div class="calendar_anchor"></div>`
@@ -59,4 +59,8 @@ const renderCalendarView = (submissions) =>{
     })
         
     };
+
 calendarButton.addEventListener("click", calendarSubmit)
+
+
+
