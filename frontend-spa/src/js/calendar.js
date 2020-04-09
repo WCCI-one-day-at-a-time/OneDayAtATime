@@ -3,7 +3,7 @@ const calendarButton = document.querySelector(".calendar_button")
 
 const calendarSubmit = () =>{
     
-
+    getSubmissions()
     console.log("calendarpressed")
     
         midRowTwo.innerHTML = `<div class="calendar_anchor"></div>`
@@ -12,53 +12,12 @@ const calendarSubmit = () =>{
         calendar month
     </h2>
    <div class="calendar_grid">
-       <p class="calendar_header">Sunday</p>
-       <p class="calendar_header">Monday</p>
-       <p class="calendar_header">Tuesday</p>
-       <p class="calendar_header">Wednesday</p>
-       <p class="calendar_header">Thursday</p>
-       <p class="calendar_header">Friday</p>
-       <p class="calendar_header">Saturday</p>
-      <div class="calendar_day calendar_day-low"></div>
-       <div class="calendar_day calendar_day-med"></div>
-       <div class="calendar_day calendar_day-high"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
-       <div class="calendar_day"></div>
+      
    </div>`
 
 
 }
-singleDays.forEach((singleDay) => {
+singleDays.forEach((singleDay) => {    
     singleDay.addEventListener("click", (singleDay)=>{
         midRowTwo.innerHTML = `<div class="day_anchor">
         <div class="single_day calendar_day-high ">
@@ -72,4 +31,36 @@ singleDays.forEach((singleDay) => {
     })
 
 } )
+const renderCalendarView = (submissions) =>{
+    
+        submissions.forEach((submission) => {
+            const emotionArray = [submission.anxious, submission.depressed, submission.sad, submission.lonely, submission.exhausted, submission.angry, submission.overwhelmed, submission.rejected]
+            console.log(emotionArray)               
+            const calendarSquare = document.createElement("div")
+            console.log(submission.year)
+            calendarSquare.classList.add("calendar_day")
+            calendarSquare.innerHTML = submission.day + "/" + submission.month + "/" + submission.year;
+            emotionArray.forEach((emotionValue) => {
+                if (emotionValue=="low"){
+                    calendarSquare.classList.add("calendar_day-low")
+                }
+              
+                if (emotionValue=="med"){
+                    calendarSquare.classList.add("calendar_day-med")
+                }  
+                if (emotionValue == "high"){
+                    calendarSquare.classList.add("calendar_day-high")
+                }
+                
+            })
+            calendarGrid.appendChild(calendarSquare)
+            
+
+    })
+        
+    };
+
 calendarButton.addEventListener("click", calendarSubmit)
+
+
+
