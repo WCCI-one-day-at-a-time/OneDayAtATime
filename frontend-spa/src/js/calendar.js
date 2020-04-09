@@ -1,24 +1,33 @@
 const calendarButton = document.querySelector(".calendar_button")
+const calendarGrid = document.createElement("div")
+const calendarAnchor = document.createElement("div")
+const calendarMonth = document.createElement("h2")
+const dayAnchor = document.createElement("div")
+const singleDay = document.createElement("div")
+const singleDayTitle = document.createElement("h3")
 
+singleDay.classList.add("single_day")
+dayAnchor.classList.add("day_anchor")
+calendarMonth.classList.add("calendar_month")
+calendarMonth.innerHTML = "April"
+calendarAnchor.classList.add("calendar_anchor")
+calendarGrid.classList.add("calendar_grid")
 
-const calendarSubmit = () =>{
-    
+const calendarSubmit = () => {
+    singleDayTitle.className = ""
+    if (midRowTwo.firstChild) {
+        midRowTwo.innerHTML = ""
+    }
+    midRowTwo.appendChild(calendarAnchor)
+    calendarAnchor.appendChild(calendarMonth)
+    calendarAnchor.appendChild(calendarGrid)
+
     getSubmissions()
-    console.log("calendarpressed")
-    
-        midRowTwo.innerHTML = `<div class="calendar_anchor"></div>`
-        const calendarAnchor = document.querySelector(".calendar_anchor")
-        calendarAnchor.innerHTML = `<h2 class="calendar_month">
-        calendar month
-    </h2>
-   <div class="calendar_grid">
-      
-   </div>`
-
 
 }
-singleDays.forEach((singleDay) => {    
-    singleDay.addEventListener("click", (singleDay)=>{
+
+singleDays.forEach((singleDay) => {
+    singleDay.addEventListener("click", (singleDay) => {
         midRowTwo.innerHTML = `<div class="day_anchor">
         <div class="single_day calendar_day-high ">
             <h3 class="">date</h3>
@@ -30,37 +39,77 @@ singleDays.forEach((singleDay) => {
     </div>`
     })
 
-} )
-const renderCalendarView = (submissions) =>{
-    
-        submissions.forEach((submission) => {
-            const emotionArray = [submission.anxious, submission.depressed, submission.sad, submission.lonely, submission.exhausted, submission.angry, submission.overwhelmed, submission.rejected]
-            console.log(emotionArray)               
-            const calendarSquare = document.createElement("div")
-            console.log(submission.year)
-            calendarSquare.classList.add("calendar_day")
-            calendarSquare.innerHTML = submission.day + "/" + submission.month + "/" + submission.year;
-            emotionArray.forEach((emotionValue) => {
-                if (emotionValue=="low"){
-                    calendarSquare.classList.add("calendar_day-low")
-                }
-              
-                if (emotionValue=="med"){
-                    calendarSquare.classList.add("calendar_day-med")
-                }  
-                if (emotionValue == "high"){
-                    calendarSquare.classList.add("calendar_day-high")
-                }
-                
-            })
-            calendarGrid.appendChild(calendarSquare)
-            
+})
+
+
+const renderCalendarView = (submissions) => {
+    calendarGrid.innerHTML = ""
+    submissions.forEach((submission) => {
+        const emotionArray = [submission.anxious, submission.depressed, submission.sad, submission.lonely, submission.exhausted, submission.angry, submission.overwhelmed, submission.rejected]
+        console.log("Emotion array: " + emotionArray)
+        const calendarSquare = document.createElement("div")
+        console.log(submission.year)
+        calendarSquare.classList.add("calendar_day")
+        calendarSquare.addEventListener("click", () => {
+            renderSingleDayView(submission)
+        })
+        const calendarSquareMonth = document.createElement("p")
+        calendarSquareMonth.classList.add("month_info")
+        calendarSquareMonth.innerText = "April"
+
+        const calendarSquareDate = document.createElement("p")
+        calendarSquareDate.classList.add("date_info")
+        calendarSquareDate.innerText = submission.day
+
+        calendarSquare.appendChild(calendarSquareMonth)
+        calendarSquare.appendChild(calendarSquareDate)
+        emotionArray.forEach((emotionValue) => {
+            if (emotionValue == "low") {
+                calendarSquare.classList.add("calendar_day-low")
+            }
+
+            if (emotionValue == "med") {
+                calendarSquare.classList.add("calendar_day-med")
+            }
+            if (emotionValue == "high") {
+                calendarSquare.classList.add("calendar_day-high")
+            }
+
+        })
+        calendarGrid.appendChild(calendarSquare)
+
 
     })
-        
-    };
+
+};
+
+const renderSingleDayView = (submission) => {
+    console.log("renderSingleDayView : " + submission)
+    if (midRowTwo.firstChild) {
+        midRowTwo.innerHTML = ""
+    }
+
+    const emotionArray = [submission.anxious, submission.depressed, submission.sad, submission.lonely, submission.exhausted, submission.angry, submission.overwhelmed, submission.rejected]
+    emotionArray.forEach((emotionValue) => {
+        console.log(emotionValue)
+        if (emotionValue == "low") {
+            singleDayTitle.classList.add("calendar_day-low")
+        }
+
+        if (emotionValue == "med") {
+            singleDayTitle.classList.add("calendar_day-med")
+        }
+        if (emotionValue == "high") {
+            singleDayTitle.classList.add("calendar_day-high")
+        }
+
+    })
+    singleDayTitle.innerText = submission.month + " - " + submission.day
+    singleDayTitle.classList.add("single_day_title")
+    midRowTwo.appendChild(dayAnchor)
+    dayAnchor.appendChild(singleDay)
+    singleDay.appendChild(singleDayTitle)
+
+}
 
 calendarButton.addEventListener("click", calendarSubmit)
-
-
-
