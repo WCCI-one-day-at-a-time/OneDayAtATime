@@ -71,6 +71,15 @@
     border-radius: 15px 15px 0 0;
     text-align: center;
 }
+.single_day_body{
+    display:flex;
+    justify-content: space-around;
+    
+}
+.single_day_list{
+    padding: 0;
+
+}
 
 
 .month_info {

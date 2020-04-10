@@ -5,6 +5,7 @@ const calendarMonth = document.createElement("h2")
 const dayAnchor = document.createElement("div")
 const singleDay = document.createElement("div")
 const singleDayTitle = document.createElement("h3")
+const singleDayBody = document.createElement("p") 
 
 singleDay.classList.add("single_day")
 dayAnchor.classList.add("day_anchor")
@@ -105,10 +106,25 @@ const renderSingleDayView = (submission) => {
 
     })
     singleDayTitle.innerText = submission.month + " - " + submission.day
+    singleDayBody.innerHTML = `<ul class="single_day_list"> 
+    <li>Anxious level: ${submission.anxious}</il> 
+    <li>Drepressed level: ${submission.depressed}</li>
+    <li>Sad level: ${submission.sad}</li>
+    <li>Lonely level: ${submission.lonely}</li>
+    <li>Exhausted level: ${submission.exhausted}</li>
+    <li>Angry level: ${submission.angry}</li>
+    <li>Overwhelmed level: ${submission.overwhelmed}</li>
+    <li>Rejected level: ${submission.rejected}</li>
+    
+    </ul> 
+    <div><p>Note: ${submission.notes}</p></div>` 
+
     singleDayTitle.classList.add("single_day_title")
+    singleDayBody.classList.add("single_day_body")
     midRowTwo.appendChild(dayAnchor)
     dayAnchor.appendChild(singleDay)
     singleDay.appendChild(singleDayTitle)
+    singleDay.appendChild(singleDayBody)
 
 }
 
