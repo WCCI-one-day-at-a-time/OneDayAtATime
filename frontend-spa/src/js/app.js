@@ -176,7 +176,7 @@ const submit = () => {
         "month": month,
         "day": day,
         "year": year,
-        "note": note
+         "note": note
     }
     console.log(newSubmitJson)
     fetch("http://localhost:8080/submit", {
@@ -188,6 +188,7 @@ const submit = () => {
     })
 
 }
+
 
 
 
