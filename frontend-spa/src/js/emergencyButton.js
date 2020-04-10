@@ -2,7 +2,7 @@ let urgent = document.querySelector(".urgent")
 
 const emergency = () =>{
     console.log("emergencyPressed")
-    midRowTwo.innerHTML = `<div class="card__container"></div>`
+    midRowTwo.innerHTML = `<div class="info-list"></div>`
 
 }
 
