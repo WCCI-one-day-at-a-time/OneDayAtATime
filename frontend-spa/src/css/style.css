@@ -15,10 +15,12 @@ body{
     background-color: #5E70B7;
 }
 .hotline-title{
-    color: #435590;
+    color: #374677;
+    font-weight: 700;
+
 }
 .hotline-number{
-color:#223275 ;
+color: #ffffff ;
 }
 ul{
     list-style: none;
