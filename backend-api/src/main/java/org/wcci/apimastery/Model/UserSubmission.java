@@ -23,7 +23,6 @@ private int month;
     private String angry;
     private String overwhelmed;
     private String rejected;
-
     private String notes;
 
     public UserSubmission() {
