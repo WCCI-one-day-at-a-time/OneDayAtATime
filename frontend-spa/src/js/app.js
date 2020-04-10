@@ -162,7 +162,7 @@ const submit = () => {
             cardAnchor.appendChild(card)
         }
 
-    })
+    })f
 
     const newSubmitJson = {
         "anxious": anxiousResponse,
@@ -176,9 +176,8 @@ const submit = () => {
         "month": month,
         "day": day,
         "year": year,
-        "note": note
     }
-    console.log(newSubmitJson)
+    console.log("Submit JSON : " + newSubmitJson)
     fetch("http://localhost:8080/submit", {
         method: "POST",
         headers: {
