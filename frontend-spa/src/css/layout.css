@@ -48,7 +48,12 @@ h1{
     grid-template-columns: 1fr 1fr;
     margin-left:80px;
 }
-
+textarea{
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 50px auto 0 auto;
+}
 .button__div{
     margin-top: 50px;
     width: 100%;
