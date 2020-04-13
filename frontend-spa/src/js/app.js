@@ -148,40 +148,40 @@ const submit = () => {
             let highResponse = ""
             switch (input.name) {
                 case "anxious":
-                    highResponse = `<a href = "https://www.crisisprevention.com/">Your anxiety score is high, please click this link for immediate help</a>`
+                    highResponse = `Your anxiety score is high, <a href="https://www.crisisprevention.com/">please click this link for immediate help</a>`
                     anxiousResponse = "high"
                     break
                 case "depressed":
-                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.rainn.org/about-national-sexual-assault-telephone-hotline"
+                    highResponse = `Your depression score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
                     depressedResponse = "high"
                     break
                 case "lonely":
-                    highResponse = `<a href = "https://www.crisisprevention.com/ , https://www.imalive.org/">Your loneliness score is high, please click this link for immediate help</a>`
+                    highResponse = `Your loneliness score is high,<a href="https://www.crisisprevention.com/"> please click this link for immediate help</a>`
                     lonelyResponse = "high"
                     break
                 case "angry":
-                    highResponse = "https://www.rainn.org/about-national-sexual-assault-telephone-hotline"
+                    highResponse = `Your anger score is high,<a href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">  please click here</a>`
                     angryResponse = "high"
                     break
                 case "overwhelmed":
-                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.rainn.org/about-national-sexual-assault-telephone-hotline" 
+                    highResponse = `Your overwhelmed score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
                     overwhelmedResponse = "high"
                     break
                 case "sad":
-                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.rainn.org/about-national-sexual-assault-telephone-hotline"
+                    highResponse = `Your sadness score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
                     sadResponse = "high"
                     break
                 case "rejected":
-                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.imalive.org/"
+                    highResponse = `Your rejected score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
                     rejectedResponse = "high"
                     break
                 case "exhausted":
-                    highResponse = `<a href = "https://www.crisisprevention.com/">Your exhaustion score is high, please click this link for immediate help</a>`
+                    highResponse = `Your exhaustion score is high,<a href="https://www.crisisprevention.com/"> please click this link for immediate help</a>`
                     exhaustedResponse = "high"
                     break
             }
 
-            card.innerText = highResponse
+            card.innerHTML = highResponse
             cardAnchor.appendChild(card)
         }
         note.innerText = textInput.value
