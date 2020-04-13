@@ -1,12 +1,13 @@
 .calendar_grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    /* grid-template-rows: repeat(5, 1fr); */
     width: 75%;
     height: 80%;
     margin: 0 auto;
     column-gap: 5px;
     row-gap: 5px;
+ 
 
 }
 
@@ -23,7 +24,7 @@
 }
 
 .calendar_anchor {
-    height: 100%;
+  
     grid-row: 1;
 }
 
