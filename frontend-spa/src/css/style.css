@@ -1,7 +1,9 @@
 *{
     color: white;
     font-family: sans-serif;
+   
 }
+
 body::after{
     background-color: rgb(95, 114, 192);
     background-image: url("https://images.unsplash.com/photo-1541256942802-7b29531f0df8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
