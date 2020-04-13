@@ -15,6 +15,8 @@ calendarAnchor.classList.add("calendar_anchor")
 calendarGrid.classList.add("calendar_grid")
 
 const calendarSubmit = () => {
+    submitButton.classList.add("hide")
+    homeButton.classList.remove("hide")
     singleDayTitle.className = ""
     if (midRowTwo.firstChild) {
         midRowTwo.innerHTML = ""

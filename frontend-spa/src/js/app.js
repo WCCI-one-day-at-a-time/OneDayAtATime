@@ -25,13 +25,15 @@ let angryResponse = ""
 let rejectedResponse = ""
 let exhaustedResponse = ""
 let note= ""
+
 const today = new Date();
 const day = today.getDate();
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
 
 const submit = () => {
-   
+    submitButton.classList.add("hide")
+    homeButton.classList.remove("hide")
     if (midRowTwo.firstChild) {
         midRowTwo.innerHTML = ""
     }
@@ -43,7 +45,7 @@ const submit = () => {
 
     midRowTwo.innerHTML = `<div class="card__container"></div>`
     const cardAnchor = document.querySelector(".card__container")
-    submitButton.innerHTML = `<a class="home_button" >Home</a>`
+
     inputs.forEach(input => {
 
         const lowResponse = input.value > 0 && input.value <= 33
