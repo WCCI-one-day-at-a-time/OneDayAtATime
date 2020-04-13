@@ -11,6 +11,9 @@ const singleDays = document.querySelectorAll(".calendar_day")
 const helpButton = document.querySelector(".help_button")
 const colMid = document.querySelector(".col-mid")
 const inputs = document.querySelectorAll(".slider_input")
+const homeButton = document.querySelector(".home_button")
+const textInput = document.querySelector(".note")
+
 
 
 let anxiousResponse = ""
@@ -21,18 +24,26 @@ let overwhelmedResponse = ""
 let angryResponse = ""
 let rejectedResponse = ""
 let exhaustedResponse = ""
+let note= ""
 const today = new Date();
 const day = today.getDate();
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
 
 const submit = () => {
+   
+    if (midRowTwo.firstChild) {
+        midRowTwo.innerHTML = ""
+    }
+    midRowTwo.appendChild(calendarAnchor)
+    calendarAnchor.appendChild(calendarMonth)
+    calendarAnchor.appendChild(calendarGrid)
 
     console.log("submitPress")
 
-    colMid.innerHTML = `<div class="card__container"></div>`
+    midRowTwo.innerHTML = `<div class="card__container"></div>`
     const cardAnchor = document.querySelector(".card__container")
-
+    submitButton.innerHTML = `<a class="home_button" >Home</a>`
     inputs.forEach(input => {
 
         const lowResponse = input.value > 0 && input.value <= 33
@@ -79,6 +90,7 @@ const submit = () => {
                     lowResponse = "go for a drive"
                     exhaustedResponse = "low"
                     break
+                
             }
             card.innerText = lowResponse
             cardAnchor.appendChild(card)
@@ -158,10 +170,11 @@ const submit = () => {
                     exhaustedResponse = "high"
                     break
             }
+
             card.innerText = highResponse
             cardAnchor.appendChild(card)
         }
-
+        note.innerText = textInput.value
     })
 
     const newSubmitJson = {
