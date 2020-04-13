@@ -45,6 +45,14 @@ const submit = () => {
 
     midRowTwo.innerHTML = `<div class="card__container"></div>`
     const cardAnchor = document.querySelector(".card__container")
+    
+
+//     let slider = document.getElementById(".slider_input");
+//     let output = document.getElementById(".range__valie");
+//     output.innerHTML = slider.value;
+//     slider.oninput = function() {
+//     output.innerHTML = this.value;
+// }
 
     inputs.forEach(input => {
 
