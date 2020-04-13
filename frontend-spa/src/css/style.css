@@ -1,7 +1,19 @@
-body{
-    background-color: #7B86B2;
+*{
     color: white;
     font-family: sans-serif;
+}
+body::after{
+    background-color: rgb(95, 114, 192);
+    background-image: url("https://images.unsplash.com/photo-1541256942802-7b29531f0df8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+    background-size: auto;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
 }
 
 .lander__header{
@@ -9,7 +21,7 @@ body{
 }
 
 .col-left{
-    background-color: #435590;
+    background-color: #3e4c81;
 }
 .button{
     background-color: #5E70B7;
@@ -26,10 +38,11 @@ ul{
     list-style: none;
 }
 .hotline{
-    color: #435590;
+    color: #374677;
 }
+
 .main-button{
-	background-color:#5e70b7;
+	background-color:#3e4c81;
 	border-radius:28px;	
 	display:inline-block;
 	cursor:pointer;
@@ -40,20 +53,36 @@ ul{
     text-shadow:0px 1px 0px #2f6627;
     user-select: none;
 }
+
 .main-button:hover {
-	background-color:#7381b9;
+	background-color:#495ba7;
 }
+
 .main-button:active {
 	position:relative;
 	top:1px;
 }
-.help_button{
+
+.submit-button{    
     padding: 21px 36px;
-    background-color: red;
+    box-shadow: 3px 3px 10px #413f3f;
 
 }
-.help_button:hover{
+
+.calendar_button{
+    padding: 21px 36px;
+    box-shadow: 3px 3px 10px #413f3f;
+}
+
+.help_button{
+    border:1px solid;
+    box-shadow: 3px 3px 10px #413f3f;
+    padding: 21px 36px;
     background-color: red;
+}
+
+.help_button:hover{
+    background-color: rgb(253, 61, 61);
     
 }
 .hide{
