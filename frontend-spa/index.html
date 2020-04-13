@@ -2,13 +2,110 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="src/css/layout.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/calendar.css">
+    <link rel="stylesheet" href="src/css/card.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 5 Project</title>
+    <title>One Day At A Time</title>
 </head>
 
 <body>
+    <div class="grid-container">
+        <aside class="col-left"></aside>
+        <section class="col-mid">
+            <div class="mid-row-one"><h1>One Day At A Time</h1>
+            </div>
+            <div class="mid-row-two">
+                <div class="speedometer-grid">
+                    <h2 class="lander__header">How Are You Feeling?</h2>
+                    <div class="rating-elements">
+                        <div class="speedometer">
+                            <p class="speedometer-title">Anxious</p>
+                            <div class="slider">
+                                <input name="anxious" class="anxious_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="speedometer">
+                            <p class="speedometer-title">Depressed</p>
+                            <div class="slider">
+                                <input name="depressed" class="depressed_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="speedometer">
+                            <p class="speedometer-title">Overwhelmed</p>
+                            <div class="slider">
+                                <input name="overwhelmed" class="overwhelmed_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="speedometer">
+                            <p class="speedometer-title">Lonely</p>
+                            <div class="slider">
+                                <input name="lonely" class="lonely_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="speedometer">
+                            <p class="speedometer-title">Sad</p>
+                            <div class="slider">
+                                <input name="sad" class="sad_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="speedometer">
+                            <p class="speedometer-title">Angry</p>
+                            <div class="slider">
+                                <input name="angry" class="angry_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="speedometer">
+                            <p class="speedometer-title">Rejected</p>
+                            <div class="slider">
+                                <input name="rejected" class="rejected_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="speedometer">
+                            <p class="speedometer-title">Exhausted</p>
+                            <div class="slider">
+                                <input name="exhausted" class="exhausted_input slider_input" type="range" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <textarea class="note" rows="7" cols="50" placeholder="Tell me about your day"></textarea>
+            </div>
 
+            <div class="mid-row-three">
+                <div class="button__div">
+                    <a class="main-button calendar_button">Calendar</a>
+                    <a class="urgent help_button main-button">Need Help Now</a>
+                    <a class="main-button submit-button">Submit</a>
+                    <a class="main-button hide home_button" href="index.html">Home</a>
+                </div>
+            </div>
+        </section>
+        <section class="col-right">
+            <div class="info-list">
+                <h2 class="hotline">Quick Reference</h2>
+                <ul>
+                    <li><span class="hotline-title">National Suicide Text 24/7: </span><span class="hotline-number">741741</span></li>
+                    <li><span class="hotline-title">National Suicide Prevention Lifeline: </span><span class="hotline-number">1-800-273-8255</span></li>
+                    <li><span class="hotline-title">RAIN (Rape, Abuse, Incest, National Network): </span><span class="hotline-number">1-800-656-4673</span></li>
+                    <li><span class="hotline-title">Child Abuse Hotline: </span><span class="hotline-number">1-800-422-4453</span></li>
+                    <li><span class="hotline-title">Veteran Hotline: </span><span class="hotline-number">800-273-8255 and press 1</span></li>
+                    <li><span class="hotline-title">VA Text 24/7: </span><span class="hotline-number">838255</span></li>
+                    <li><span class="hotline-title">Call TTY if you have hearing loss: </span><span class="hotline-number">800-799-4889</span></li>
+                    <li><span class="hotline-title">For more information click: </span><span><a href="https://www.veteranscrisisline.net/" target="_blank">veteranscrisisline.net</a></span></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="src/js/app.js"></script>
+    <script src="src/js/fetchSubmissions.js"></script>
+    <script src="src/js/calendar.js"></script>
+    <script src="src/js/emergencyButton.js"></script>
+ 
 </body>
 
 </html>
