@@ -113,15 +113,15 @@ const submit = () => {
                     anxiousResponse = "med"
                     break
                 case "depressed":
-                    medResponse = "whatever depressed"
+                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" >How to fight depression</a>`
                     depressedResponse = "med"
                     break
                 case "lonely":
-                    medResponse = "im alone!"
+                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" >How to fight loneliness</a>`
                     lonelyResponse = "med"
                     break
                 case "angry":
-                    medResponse = "take a breather"
+                    medResponse = `<a href = "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434" >How to deal with anger</a>`
                     angryResponse = "med"
                     break
                 case "overwhelmed":
@@ -129,7 +129,7 @@ const submit = () => {
                     overwhelmedResponse = "med"
                     break
                 case "sad":
-                    medResponse = "go to a pet store"
+                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" >how to fight being sad</a>`
                     sadResponse = "med"
                     break
                 case "rejected":
@@ -137,46 +137,46 @@ const submit = () => {
                     rejectedResponse = "med"
                     break
                 case "exhausted":
-                    medResponse = "go for a drive"
+                    medResponse = `<a href ="https://www.imalive.org/">how to overcome exhuastion</a>`
                     exhaustedResponse = "med"
                     break
             }
-            card.innerText = medResponse
+            card.innerHTML = medResponse
             cardAnchor.appendChild(card)
         }
         if (highResponse) {
             let highResponse = ""
             switch (input.name) {
                 case "anxious":
-                    highResponse = "whatever low response"
+                    highResponse = `<a href = "https://www.crisisprevention.com/">Your anxiety score is high, please click this link for immediate help</a>`
                     anxiousResponse = "high"
                     break
                 case "depressed":
-                    highResponse = "whatever depressed"
+                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.rainn.org/about-national-sexual-assault-telephone-hotline"
                     depressedResponse = "high"
                     break
                 case "lonely":
-                    highResponse = "im alone!"
+                    highResponse = `<a href = "https://www.crisisprevention.com/ , https://www.imalive.org/">Your loneliness score is high, please click this link for immediate help</a>`
                     lonelyResponse = "high"
                     break
                 case "angry":
-                    highResponse = "take a breather"
+                    highResponse = "https://www.rainn.org/about-national-sexual-assault-telephone-hotline"
                     angryResponse = "high"
                     break
                 case "overwhelmed":
-                    highResponse = "take a walk"
+                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.rainn.org/about-national-sexual-assault-telephone-hotline" 
                     overwhelmedResponse = "high"
                     break
                 case "sad":
-                    highResponse = "go to a pet store"
+                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.rainn.org/about-national-sexual-assault-telephone-hotline"
                     sadResponse = "high"
                     break
                 case "rejected":
-                    highResponse = "call a family member"
+                    highResponse = "https://suicidepreventionlifeline.org/ , https://www.imalive.org/"
                     rejectedResponse = "high"
                     break
                 case "exhausted":
-                    highResponse = "go for a drive"
+                    highResponse = `<a href = "https://www.crisisprevention.com/">Your exhaustion score is high, please click this link for immediate help</a>`
                     exhaustedResponse = "high"
                     break
             }
