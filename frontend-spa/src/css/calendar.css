@@ -25,8 +25,6 @@
 .calendar_anchor {
     height: 100%;
     grid-row: 1;
-
-
 }
 
 .calendar_month {
@@ -62,8 +60,9 @@
     width: 75%;
     margin: 0 auto;
     color: #435590;
-    background-color: #c8acee;
+    background-color: #EF959C;
     border-radius: 15px;
+    box-shadow: 3px 3px 10px #413f3f;
 
 }
 
@@ -81,14 +80,12 @@
 
 }
 
-
 .month_info {
     text-align: center;
     font-size: 1.2em;
     font-weight: 700;
     margin-top: 5px;
 }
-
 
 .date_info {
     text-align: center;
