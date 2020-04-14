@@ -69,7 +69,7 @@ const submit = () => {
         
 
         switch(input.name){
-            case "anxious":
+            case "anxious": 
             anxiousRange = input.value
             break
             // case "depressed":
@@ -80,19 +80,19 @@ const submit = () => {
             let lowResponse = ""
             switch (input.name) {
                 case "anxious":
-                    lowResponse = "whatever low response"
+                    lowResponse = "Call or email a friend you haven't talked to in awhile"
                     anxiousResponse = "low"
                     break
                 case "depressed":
-                    lowResponse = "whatever depressed"
+                    lowResponse = "Find something on YouTube that makes you laugh out loud"
                     depressedResponse = "low"
                     break
                 case "lonely":
-                    lowResponse = "im alone!"
+                    lowResponse = "Try volunteering at a pet shelter"
                     lonelyResponse = "low"
                     break
                 case "angry":
-                    lowResponse = "take a breather"
+                    lowResponse = "take a breather, count to 10 in and out"
                     angryResponse = "low"
                     break
                 case "overwhelmed":
@@ -108,7 +108,7 @@ const submit = () => {
                     rejectedResponse = "low"
                     break
                 case "exhausted":
-                    lowResponse = "go for a drive"
+                    lowResponse = "Make sure you have enough water, and have eaten a proper meal"
                     exhaustedResponse = "low"
                     break
                 
@@ -120,7 +120,7 @@ const submit = () => {
             let medResponse = ""
             switch (input.name) {
                 case "anxious":
-                    medResponse = "whatever low response"
+                    medResponse = '<a href="https://www.psychologytoday.com/us/blog/in-practice/201503/50-strategies-beat-anxiety">How to fight anxiety</a>'
                     anxiousResponse = "med"
                     break
                 case "depressed":
@@ -128,7 +128,7 @@ const submit = () => {
                     depressedResponse = "med"
                     break
                 case "lonely":
-                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" >How to fight loneliness</a>`
+                    medResponse = `<a href= "https://www.verywellmind.com/how-to-cope-with-loneliness-3144939" >How to fight loneliness</a>`
                     lonelyResponse = "med"
                     break
                 case "angry":
@@ -136,15 +136,15 @@ const submit = () => {
                     angryResponse = "med"
                     break
                 case "overwhelmed":
-                    medResponse = "take a walk"
+                    medResponse = '<a href="https://www.psychologytoday.com/us/blog/in-practice/201503/50-strategies-beat-anxiety">How to manage feeling overwhelmed</a>'
                     overwhelmedResponse = "med"
                     break
                 case "sad":
-                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" >how to fight being sad</a>`
+                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" >How to fight being sad</a>`
                     sadResponse = "med"
                     break
                 case "rejected":
-                    medResponse = "call a family member"
+                    medResponse = `<a href= "https://www.psychalive.org/how-to-deal-with-rejection/" >How to fight being feeling rejected</a>`
                     rejectedResponse = "med"
                     break
                 case "exhausted":
@@ -163,7 +163,7 @@ const submit = () => {
                     anxiousResponse = "high"
                     break
                 case "depressed":
-                    highResponse = `Your depression score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
+                    highResponse = `Your depression score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
                     depressedResponse = "high"
                     break
                 case "lonely":
@@ -175,15 +175,15 @@ const submit = () => {
                     angryResponse = "high"
                     break
                 case "overwhelmed":
-                    highResponse = `Your overwhelmed score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
+                    highResponse = `Your overwhelmed score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
                     overwhelmedResponse = "high"
                     break
                 case "sad":
-                    highResponse = `Your sadness score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
+                    highResponse = `Your sadness score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
                     sadResponse = "high"
                     break
                 case "rejected":
-                    highResponse = `Your rejected score is high,<a href="https://suicidepreventionlifeline.org/"> please click here</a>`
+                    highResponse = `Your rejected score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
                     rejectedResponse = "high"
                     break
                 case "exhausted":
@@ -195,7 +195,7 @@ const submit = () => {
             card.innerHTML = highResponse
             cardAnchor.appendChild(card)
         }
-        note.innerText = textInput.value
+        note.innerHTML = textInput.value
     })
 
     const newSubmitJson = {
