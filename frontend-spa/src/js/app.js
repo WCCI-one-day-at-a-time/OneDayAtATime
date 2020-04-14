@@ -24,12 +24,54 @@ let overwhelmedResponse = ""
 let angryResponse = ""
 let rejectedResponse = ""
 let exhaustedResponse = ""
-let note= ""
+let note = ""
 
 const today = new Date();
 const day = today.getDate();
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
+
+let anxiousRange = document.querySelector(".anxious__value");
+let depressedRange = document.querySelector(".depressed__value");
+let overwhelmedRange = document.querySelector(".overwhelmed__value");
+let lonelyRange = document.querySelector(".lonely__value");
+let sadRange = document.querySelector(".sad__value");
+let angryRange = document.querySelector(".angry__value");
+let rejectedRange = document.querySelector(".rejected__value");
+let exhaustedRange = document.querySelector(".exhausted__value");
+
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        switch (input.name) {
+            case "anxious":
+                anxiousRange.innerText = input.value
+                break
+            case "depressed":
+                depressedRange.innerText = input.value
+                break
+            case "overwhelmed":
+                overwhelmedRange.innerText = input.value
+                break
+            case "lonely":
+                lonelyRange.innerText = input.value
+                break
+            case "sad":
+                sadRange.innerText = input.value
+                break
+            case "angry":
+                angryRange.innerText = input.value
+                break
+            case "rejected":
+                rejectedRange.innerText = input.value
+                break
+            case "exhausted":
+                exhaustedRange.innerText = input.value
+        }
+    })
+})
+
+
+
 
 const submit = () => {
     submitButton.classList.add("hide")
@@ -41,18 +83,11 @@ const submit = () => {
     calendarAnchor.appendChild(calendarMonth)
     calendarAnchor.appendChild(calendarGrid)
 
-    console.log("submitPress")
 
     midRowTwo.innerHTML = `<div class="card__container"></div>`
     const cardAnchor = document.querySelector(".card__container")
-    
 
-//     let slider = document.getElementById(".slider_input");
-//     let output = document.getElementById(".range__valie");
-//     output.innerHTML = slider.value;
-//     slider.oninput = function() {
-//     output.innerHTML = this.value;
-// }
+    note = textInput.value
 
     inputs.forEach(input => {
 
@@ -61,20 +96,6 @@ const submit = () => {
         const highResponse = input.value >= 67 && input.value <= 100
         const card = document.createElement("div")
         card.classList.add("card")
-
-
-        console.log(input.value + input.name)
-            
-        let anxiousRange = document.querySelector(".anxious__value");
-        
-
-        switch(input.name){
-            case "anxious":
-            anxiousRange = input.value
-            break
-            // case "depressed":
-            // depressedRan
-        }
 
         if (lowResponse) {
             let lowResponse = ""
@@ -111,7 +132,7 @@ const submit = () => {
                     lowResponse = "go for a drive"
                     exhaustedResponse = "low"
                     break
-                
+
             }
             card.innerText = lowResponse
             cardAnchor.appendChild(card)
@@ -195,7 +216,7 @@ const submit = () => {
             card.innerHTML = highResponse
             cardAnchor.appendChild(card)
         }
-        note.innerText = textInput.value
+
     })
 
     const newSubmitJson = {
@@ -210,9 +231,8 @@ const submit = () => {
         "month": month,
         "day": day,
         "year": year,
-         "note": note
+        "note": note
     }
-    console.log(newSubmitJson)
     fetch("http://localhost:8080/submit", {
         method: "POST",
         headers: {
