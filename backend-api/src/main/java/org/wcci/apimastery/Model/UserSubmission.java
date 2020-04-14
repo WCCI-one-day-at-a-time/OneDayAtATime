@@ -23,12 +23,12 @@ private int month;
     private String angry;
     private String overwhelmed;
     private String rejected;
-    private String notes;
+    private String note;
 
     public UserSubmission() {
     }
 
-    public UserSubmission(int month, int day, int year, String anxious, String depressed, String sad, String lonely, String exhausted, String angry, String overwhelmed, String rejected, String notes) {
+    public UserSubmission(int month, int day, int year, String anxious, String depressed, String sad, String lonely, String exhausted, String angry, String overwhelmed, String rejected, String note) {
         this.month = month;
         this.day = day;
         this.year = year;
@@ -40,11 +40,11 @@ private int month;
         this.angry = angry;
         this.overwhelmed = overwhelmed;
         this.rejected = rejected;
-        this.notes = notes;
+        this.note = note;
     }
 
-    public String getNotes() {
-        return notes;
+    public String getNote() {
+        return note;
     }
 
     public int getDay() {

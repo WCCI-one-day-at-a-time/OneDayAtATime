@@ -96,21 +96,7 @@ const submit = () => {
         const highResponse = input.value >= 67 && input.value <= 100
         const card = document.createElement("div")
         card.classList.add("card")
-
-
-
-        console.log(input.value + input.name)
-            
-        let anxiousRange = document.querySelector(".anxious__value");
-        
-
-        switch(input.name){
-            case "anxious": 
-            anxiousRange = input.value
-            break
-            // case "depressed":
-            // depressedRan
-        }
+             
         if (lowResponse) {
             let lowResponse = ""
             switch (input.name) {
@@ -194,35 +180,35 @@ const submit = () => {
             let highResponse = ""
             switch (input.name) {
                 case "anxious":
-                    highResponse = `Your anxiety score is high, <a href="https://www.crisisprevention.com/">please click this link for immediate help</a>`
+                    highResponse = 'Your anxiety score is high, &nbsp; <a href="https://www.crisisprevention.com/" target="_blank">click here</a>'
                     anxiousResponse = "high"
                     break
                 case "depressed":
-                    highResponse = `Your depression score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
+                    highResponse = `Your depression score is high, &nbsp; <a href="https://suicidepreventionlifeline.org/" target="_blank">click here</a>`
                     depressedResponse = "high"
                     break
                 case "lonely":
-                    highResponse = `Your loneliness score is high,<a href="https://www.crisisprevention.com/"> please click this link for immediate help</a>`
+                    highResponse = `Your loneliness score is high, &nbsp; <a href="https://www.crisisprevention.com/" target="_blank">click here</a>`
                     lonelyResponse = "high"
                     break
                 case "angry":
-                    highResponse = `Your anger score is high,<a href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">  please click here</a>`
+                    highResponse = `Your anger score is high, &nbsp;<a href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline" target="_blank">click here</a>`
                     angryResponse = "high"
                     break
                 case "overwhelmed":
-                    highResponse = `Your overwhelmed score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
+                    highResponse = `Your overwhelmed score is high, &nbsp;<a href="https://suicidepreventionlifeline.org/" target="_blank">click here</a>`
                     overwhelmedResponse = "high"
                     break
                 case "sad":
-                    highResponse = `Your sadness score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
+                    highResponse = `Your sadness score is high, &nbsp; <a href="https://suicidepreventionlifeline.org/" target="_blank">click here</a>`
                     sadResponse = "high"
                     break
                 case "rejected":
-                    highResponse = `Your rejected score is high,<a href="https://suicidepreventionlifeline.org/"> please click here this link for immediate help</a>`
+                    highResponse = `Your rejected score is high, &nbsp;<a href="https://suicidepreventionlifeline.org/" target="_blank">click here</a>`
                     rejectedResponse = "high"
                     break
                 case "exhausted":
-                    highResponse = `Your exhaustion score is high,<a href="https://www.crisisprevention.com/"> please click this link for immediate help</a>`
+                    highResponse = `Your exhaustion score is high, &nbsp;<a href="https://www.crisisprevention.com/" target="_blank">click here</a>`
                     exhaustedResponse = "high"
                     break
             }
