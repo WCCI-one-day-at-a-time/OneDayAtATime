@@ -64,6 +64,17 @@ const submit = () => {
 
 
         console.log(input.value + input.name)
+            
+        let anxiousRange = document.querySelector(".anxious__value");
+        
+
+        switch(input.name){
+            case "anxious":
+            anxiousRange = input.value
+            break
+            // case "depressed":
+            // depressedRan
+        }
 
         if (lowResponse) {
             let lowResponse = ""
