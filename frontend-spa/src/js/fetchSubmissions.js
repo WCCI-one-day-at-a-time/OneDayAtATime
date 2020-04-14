@@ -1,9 +1,7 @@
-const getSubmissions =() =>{
+const getSubmissions = () => {
     fetch('http://localhost:8080/response')
-    .then(response => response.json())
-    .then(submissions => renderCalendarView(submissions))
-  
-    
+        .then(response => response.json())
+        .then(submissions => renderCalendarView(submissions))
+
+
 }
-
-
