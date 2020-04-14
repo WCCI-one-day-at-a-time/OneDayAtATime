@@ -12,7 +12,7 @@ const emergency = () => {
         emergencyAnchor.classList.add("emergency_card")
         midRowTwo.appendChild(emergencyAnchor)
         emergencyAnchor.appendChild(emergencyCard)
-        emergencyCard.innerHTML = '<p> For immediate help dial <p class="help_now">911</p> </p><p> and follow the links below: </p><p><a href="https://www.samhsa.gov/esmi-treatment-locator">Locations to get help across the country</a></p>'
+        emergencyCard.innerHTML = '<p> For immediate help dial <p class="help_now">911</p> </p><p> and follow the links below: </p><p><a href="https://www.samhsa.gov/esmi-treatment-locator" target="_blank">Locations to get help across the country</a></p>'
     
  
     
