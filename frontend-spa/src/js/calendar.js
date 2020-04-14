@@ -5,7 +5,7 @@ const calendarMonth = document.createElement("h2")
 const dayAnchor = document.createElement("div")
 const singleDay = document.createElement("div")
 const singleDayTitle = document.createElement("h3")
-const singleDayBody = document.createElement("p") 
+const singleDayBody = document.createElement("p")
 
 singleDay.classList.add("single_day")
 dayAnchor.classList.add("day_anchor")
@@ -49,9 +49,7 @@ const renderCalendarView = (submissions) => {
     calendarGrid.innerHTML = ""
     submissions.forEach((submission) => {
         const emotionArray = [submission.anxious, submission.depressed, submission.sad, submission.lonely, submission.exhausted, submission.angry, submission.overwhelmed, submission.rejected]
-        console.log("Emotion array: " + emotionArray)
         const calendarSquare = document.createElement("div")
-        console.log(submission.year)
         calendarSquare.classList.add("calendar_day")
         calendarSquare.addEventListener("click", () => {
             renderSingleDayView(submission)
@@ -87,14 +85,12 @@ const renderCalendarView = (submissions) => {
 };
 
 const renderSingleDayView = (submission) => {
-    console.log("renderSingleDayView : " + submission)
     if (midRowTwo.firstChild) {
         midRowTwo.innerHTML = ""
     }
 
     const emotionArray = [submission.anxious, submission.depressed, submission.sad, submission.lonely, submission.exhausted, submission.angry, submission.overwhelmed, submission.rejected]
     emotionArray.forEach((emotionValue) => {
-        console.log(emotionValue)
         if (emotionValue == "low") {
             singleDayTitle.classList.add("calendar_day-low")
         }
@@ -119,7 +115,7 @@ const renderSingleDayView = (submission) => {
     <li>Rejected level: ${submission.rejected}</li>
     
     </ul> 
-    <div><p>Note: ${submission.notes}</p></div>` 
+    <div><p>Note: ${submission.note}</p></div>`
 
     singleDayTitle.classList.add("single_day_title")
     singleDayBody.classList.add("single_day_body")

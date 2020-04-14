@@ -12,6 +12,7 @@
     padding: 0;
     margin: 0;
 }
+
 .slider_input::-webkit-slider-thumb {
     -webkit-appearance: none;
     border-radius: 50px;
@@ -20,14 +21,14 @@
     height: 20px;
     background: #3e4c81;
     cursor: pointer;
-  }
-  
-  .slider_input::-moz-range-thumb {
+}
+
+.slider_input::-moz-range-thumb {
     width: 20x;
     height: 20px;
     background: #3e4c81;
     cursor: pointer;
-  }
+}
 
 .range__value {
     display: inline-block;
@@ -37,7 +38,7 @@
     text-align: center;
     border-radius: 3px;
     background: #3e4c81;
-    padding: 5px 10px;
+    padding: 5px 5px;
     margin-left: 8px;
     box-sizing: border-box;
 
