@@ -19,20 +19,24 @@ public class Populator implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    UserSubmission testSubmission1 = new UserSubmission(4, 2, 2020, "high", "low", "med", "low", "med", "high", "high", "low", "Had midterms today");
-  userSubmissionRepository.save(testSubmission1);
-    UserSubmission testSubmission2 = new UserSubmission(4, 3, 2020, "med", "high", "low", "low", "med", "low", "med", "med", "Rough day");
+    UserSubmission testSubmission1 = new UserSubmission(4, 13, 2020, "high", "low", "med", "low", "med", "high", "high", "low", "I feel like the world is agaisnt me");
+      userSubmissionRepository.save(testSubmission1);
+    UserSubmission testSubmission2 = new UserSubmission(4, 14, 2020, "high", "low", "med", "low", "med", "high", "high", "high", "My friends do not like me unless I pay the bill");
       userSubmissionRepository.save(testSubmission2);
-    UserSubmission testSubmission3 = new UserSubmission(4, 4, 2020, "low", "low", "low", "low", "low", "low", "low", "low", "No one was home");
+    UserSubmission testSubmission3 = new UserSubmission(4, 15, 2020, "low", "low", "low", "low", "low", "low", "low", "low", "Went to the pet store!");
       userSubmissionRepository.save(testSubmission3);
-    UserSubmission testSubmission4 = new UserSubmission(4, 5, 2020, "med", "low", "low", "med", "med", "med", "med", "low", "Just a long day");
+    UserSubmission testSubmission4 = new UserSubmission(4, 16, 2020, "med", "med", "low", "low", "med", "low", "med", "med", "Rough day");
       userSubmissionRepository.save(testSubmission4);
-    UserSubmission testSubmission5 = new UserSubmission(4, 6, 2020, "low", "low", "low", "low", "low", "low", "low", "low", "Making to-do lists");
+    UserSubmission testSubmission5 = new UserSubmission(4, 17, 2020, "high", "low", "low", "low", "high", "med", "high", "low", "Had midterms today");
       userSubmissionRepository.save(testSubmission5);
-    UserSubmission testSubmission6 = new UserSubmission(4, 7, 2020, "low", "med", "med", "low", "med", "high", "med", "low", "Monday after a browns game");
+    UserSubmission testSubmission6 = new UserSubmission(4, 18, 2020, "low", "low", "low", "low", "low", "low", "low", "low", "Went to park for two hours");
       userSubmissionRepository.save(testSubmission6);
-     UserSubmission testSubmission7 = new UserSubmission(4, 8, 2020, "low", "low", "low", "low", "low", "low", "low", "low", "Went to the park with a friend");
+    UserSubmission testSubmission7 = new UserSubmission(4, 19, 2020, "low", "low", "low", "low", "low", "low", "low", "low", "Making to-do lists");
       userSubmissionRepository.save(testSubmission7);
+    UserSubmission testSubmission8 = new UserSubmission(4, 20, 2020, "low", "med", "med", "low", "med", "high", "med", "low", "Monday after a browns game");
+      userSubmissionRepository.save(testSubmission8);
+     UserSubmission testSubmission9 = new UserSubmission(4, 21, 2020, "low", "low", "low", "low", "low", "low", "low", "low", "Went to the park with a friend");
+      userSubmissionRepository.save(testSubmission9);
 }
 
 
