@@ -1,0 +1,94 @@
+.calendar_grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    column-gap: 15px;
+    row-gap: 15px;
+
+}
+
+.calendar_day {
+    background-color: #c8acee;
+    border-radius: 15px;
+    user-select: none;
+    box-shadow: 3px 3px 10px #413f3f;
+}
+
+.calendar_day:hover {
+    transition: transform 100ms ease-out;
+    transform: scale(1.1);
+}
+
+.calendar_anchor {
+    grid-row: 1;
+}
+
+.calendar_month {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.calendar_day-low {
+    background-color: #acebee;
+
+}
+
+.calendar_day-med {
+    background-color: #dcee95;
+
+}
+
+.calendar_day-high {
+    background-color: #ec6996;
+}
+
+.calendar_header {
+    text-align: center;
+
+}
+
+.day_anchor {
+    height: 100%;
+}
+
+.single_day {
+    height: 50%;
+    width: 75%;
+    margin: 0 auto;
+    color: #435590;
+    background-color: #EF959C;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #413f3f;
+
+}
+
+.single_day_title {
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+}
+
+.single_day_body {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.single_day_list {
+    padding: 0;
+
+}
+
+.month_info {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.date_info {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+}

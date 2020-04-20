@@ -1,0 +1,97 @@
+*{
+    color: white;
+    font-family: sans-serif;
+   
+}
+
+body::after{
+    background-color: rgb(95, 114, 192);
+    background-image: url("https://images.unsplash.com/photo-1541256942802-7b29531f0df8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+    background-size:cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.lander__header{
+    font-size: 2.5em;
+}
+
+.col-left{
+    background-color: #3e4c81;
+}
+.button{
+    background-color: #5E70B7;
+}
+.hotline-title{
+    color: #374677;
+    font-weight: 700;
+
+}
+.hotline-number{
+color: #ffffff ;
+}
+ul{
+    list-style: none;
+}
+.hotline{
+    color: #374677;
+}
+
+.main-button{
+	background-color:#3e4c81;
+	border-radius:28px;	
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+    user-select: none;
+    box-shadow: 3px 3px 10px #413f3f;
+
+}
+
+.main-button:hover {
+	background-color:#495ba7;
+}
+
+.main-button:active {
+	position:relative;
+	top:1px;
+}
+
+.submit-button{    
+    padding: 21px 36px;
+}
+.home_button{
+    padding: 21px 36px;
+}
+
+.calendar_button{
+    padding: 21px 36px;
+}
+
+.help_button{
+    border:1px solid;
+    padding: 21px 36px;
+    background-color: red;
+}
+
+.help_button:hover{
+    background-color: rgb(253, 61, 61);
+    
+}
+.hide{
+    visibility: hidden;
+    display: none;
+}
+
+
+
