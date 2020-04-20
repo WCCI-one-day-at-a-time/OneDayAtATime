@@ -138,42 +138,43 @@ const submit = () => {
             cardAnchor.appendChild(card)
         }
         if (medResponse) {
+            let metRep = `Possible meetups&nbsp;<a href="https://www.meetup.com/find/events/?allMeetups=false&keywords=feeling+${input.name}" target="_blank">here</a>`
             let medResponse = ""
             switch (input.name) {
                 case "anxious":
-                    medResponse = '<a href="https://www.psychologytoday.com/us/blog/in-practice/201503/50-strategies-beat-anxiety" target="_blank">How to fight anxiety</a>'
+                    medResponse = `<a href="https://www.psychologytoday.com/us/blog/in-practice/201503/50-strategies-beat-anxiety">How to fight anxiety</a>.&nbsp;` + metRep
                     anxiousResponse = "med"
                     break
                 case "depressed":
-                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" target="_blank">How to fight depression</a>`
+                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression">How to fight depression</a>.&nbsp;` + metRep
                     depressedResponse = "med"
                     break
                 case "lonely":
-                    medResponse = `<a href= "https://www.verywellmind.com/how-to-cope-with-loneliness-3144939" target="_blank">How to fight loneliness</a>`
+                    medResponse = `<a href= "https://www.verywellmind.com/how-to-cope-with-loneliness-3144939">How to fight loneliness</a>.&nbsp;` + metRep
                     lonelyResponse = "med"
                     break
                 case "angry":
-                    medResponse = `<a href = "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434" target="_blank">How to deal with anger</a>`
+                    medResponse = `<a href = "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434" >How to deal with anger</a>.&nbsp;` + metRep
                     angryResponse = "med"
                     break
                 case "overwhelmed":
-                    medResponse = '<a href="https://www.psychologytoday.com/us/blog/in-practice/201503/50-strategies-beat-anxiety" target="_blank">How to manage feeling overwhelmed</a>'
+                    medResponse = `<a href="https://www.psychologytoday.com/us/blog/in-practice/201503/50-strategies-beat-anxiety">How to manage feeling overwhelmed</a>.&nbsp;` + metRep
                     overwhelmedResponse = "med"
                     break
                 case "sad":
-                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression" target="_blank">How to fight being sad</a>`
+                    medResponse = `<a href= "https://www.healthline.com/health/depression/how-to-fight-depression">How to fight being sad</a>.&nbsp;` + metRep
                     sadResponse = "med"
                     break
                 case "rejected":
-                    medResponse = `<a href= "https://www.psychalive.org/how-to-deal-with-rejection/" target="_blank">How to fight being feeling rejected</a>`
+                    medResponse = `<a href= "https://www.psychalive.org/how-to-deal-with-rejection/">How to fight being feeling rejected</a>.&nbsp;` + metRep
                     rejectedResponse = "med"
                     break
                 case "exhausted":
-                    medResponse = `<a href ="https://www.imalive.org/" target="_blank">how to overcome exhuastion</a>`
+                    medResponse = `<a href ="https://www.imalive.org/">How to overcome exhuastion</a>.&nbsp;` + metRep
                     exhaustedResponse = "med"
                     break
             }
-            card.innerHTML = medResponse
+            card.innerHTML = medResponse + "<br>" +metRep;
             cardAnchor.appendChild(card)
         }
         if (highResponse) {
