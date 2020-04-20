@@ -233,7 +233,7 @@ const submit = () => {
         "year": year,
         "note": note
     }
-    fetch("http://localhost:8080/submit", {
+    fetch("https://one-day-at-a-time.herokuapp.com//submit", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'

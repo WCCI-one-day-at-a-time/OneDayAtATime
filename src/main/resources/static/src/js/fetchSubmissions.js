@@ -1,5 +1,5 @@
 const getSubmissions = () => {
-    fetch('http://localhost:8080/response')
+    fetch('https://one-day-at-a-time.herokuapp.com/response')
         .then(response => response.json())
         .then(submissions => renderCalendarView(submissions))
 
