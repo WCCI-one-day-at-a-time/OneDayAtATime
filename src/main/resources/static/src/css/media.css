@@ -1,0 +1,13 @@
+@media all and (max-width: 1280px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .button__div {
+        margin-top: 20px;
+    }
+
+    .note {
+        margin-top: 20px;
+    }
+}
