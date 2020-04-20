@@ -174,7 +174,7 @@ const submit = () => {
                     exhaustedResponse = "med"
                     break
             }
-            card.innerHTML = medResponse + "<br>" +metRep;
+            card.innerHTML = medResponse;
             cardAnchor.appendChild(card)
         }
         if (highResponse) {
